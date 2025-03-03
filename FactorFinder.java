@@ -17,10 +17,11 @@ class FactorFinder {
 
                 // Resize array if full
                 if (index == maxFactor) {
-                    maxFactor *= 2;
+                    maxFactor = maxFactor * 2;
                     factors = Arrays.copyOf(factors, maxFactor);
                 }
-                factors[index++] = i;
+                factors[index] = i;
+		index++;
             }
         }
 
